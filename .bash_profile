@@ -1,4 +1,6 @@
-# Ability to use 'subl' command to launch files in sublime text
+# Benny Ho
+# Date Created: 7/14/2017
+# General Purpose, very minimal bash profile
 
 TIME=$(date "+%H")
 if [ $TIME -lt 12 ]; then
@@ -12,6 +14,7 @@ else
         echo "If you spend too much time thinking about a thing, you’ll never get it done."
 fi
 
+# Ability to use 'subl' command to launch files in sublime text
 export PATH=$PATH:~/bin
 export EDITOR='vim'
 
