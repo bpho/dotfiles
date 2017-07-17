@@ -4,13 +4,13 @@
 
 TIME=$(date "+%H")
 if [ $TIME -lt 12 ]; then
-        echo "Good Morning ${USER}!"
+        echo "Good Morning $USER!"
         echo "All progress takes place outside the comfort zone."
 elif [ $TIME -lt 18 ]; then
-        echo "Good Afternoon ${USER}!"
+        echo "Good Afternoon $USER!"
         echo "We generate fears while we sit. We overcome them by action."
 else
-        echo "Good Evening ${USER}!"
+        echo "Good Evening $USER!"
         echo "If you spend too much time thinking about a thing, you’ll never get it done."
 fi
 
@@ -26,8 +26,8 @@ alias .5='cd ../../../../../'               # Go back 5 directory levels
 alias .6='cd ../../../../../../'            # Go back 6 directory levels
 
 # Changes the bash prompt to be colorized, and rearranges the prompt to be:
-# username@hostname:cwd $
-export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$ "
+# username@hostname:cwd $ Also adds time to the prompt
+export PS1="[\t] \[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$ "
 
 # Enables command line colors, and defines colors for the 'ls' command
 export CLICOLOR=1
